@@ -127,9 +127,9 @@ src/
 
 ## ❤️ Dedication
 
-Designed and built with passion by **Jalal Akbar**.
+Created with ❤️ by **Jalal Akbar**
 
-*Dedicated to my father, **M. Akbar** — my greatest inspiration. This project reflects the values of hard work and excellence he instilled in me.*
+*Dedicated To My ❤️ J/S — My Inspiration.*
 
 ---
 
