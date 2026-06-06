@@ -1,0 +1,10 @@
+/* Professional CSS Architecture */
+@import './styles/variables.css';
+@import './styles/globals.css';
+@import './styles/layout.css';
+@import './styles/common.css';
+@import './styles/dashboard.css';
+@import './styles/transactions.css';
+@import './styles/budget.css';
+@import './styles/auth.css';
+@import './styles/responsive.css';

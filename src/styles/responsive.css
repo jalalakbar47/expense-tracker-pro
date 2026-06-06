@@ -1,0 +1,158 @@
+/* Global Responsive System */
+
+/* Mobile & Tablet Styles (Max 1200px) */
+@media (max-width: 1200px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet Styles (Max 1024px) */
+@media (max-width: 1024px) {
+  .current-date {
+    display: none;
+  }
+  
+  .budget-overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Phone Styles (Max 768px) */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 1rem;
+  }
+  
+  .mobile-menu-btn {
+    display: flex;
+  }
+  
+  .header-search {
+    display: none;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .sidebar-overlay.show {
+    display: block;
+  }
+  
+  .mobile-close {
+    display: flex;
+  }
+
+  .footer-top, .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .dedication {
+    text-align: center;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .primary-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .data-actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-container {
+    padding: 1rem;
+  }
+}
+
+/* Small Phone Styles (Max 640px) */
+@media (max-width: 640px) {
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .status-metrics {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* Extra Small Phone Styles (Max 480px) */
+@media (max-width: 480px) {
+  .health-score-body {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quick-actions-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .action-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .details-actions {
+    flex-direction: column;
+  }
+
+  .modal-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+  
+  .modal-content {
+    border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+    max-height: 85vh;
+  }
+
+  .toast-container {
+    top: auto;
+    bottom: 24px;
+    right: 24px;
+    left: 24px;
+  }
+  
+  .toast {
+    min-width: 0;
+    width: 100%;
+  }
+}

@@ -1,92 +1,66 @@
 # Expense Tracker Pro 🚀
 
 > A premium, multi-user personal finance SaaS dashboard built with **React.js + Vite**.
+> **Repository:** [https://github.com/jalalakbar47/expense-tracker-pro.git](https://github.com/jalalakbar47/expense-tracker-pro.git)
 
 ---
 
-## 📸 App Showcase
+## 📸 App Showcase (Light Mode)
 
-### 🔐 Authentication
+### 🔐 Authentication Flow
+Capture the premium onboarding experience with our high-conversion forms.
 
-| Login | Register |
-|-------|----------|
-| ![Login](screenshots/login.png) | ![Register](screenshots/register.png) |
-
----
-
-### ☀️ Light Mode
-
-| Dashboard | Transactions |
-|-----------|--------------|
-| ![Dashboard Light](screenshots/dashboard_light.png) | ![Transactions Light](screenshots/transactions_light.png) |
-
-| Analytics | Budget |
-|-----------|--------|
-| ![Analytics Light](screenshots/analytics_light.png) | ![Budget Light](screenshots/budget_light.png) |
-
-| Settings |
-|----------|
-| ![Settings Light](screenshots/settings_light.png) |
+| Login Page | Register Page |
+|:---:|:---:|
+| ![Login State](screenshots/login.png) | ![Register State](screenshots/register.png) |
 
 ---
 
-### 🌙 Dark Mode
+### 📊 Financial Dashboard
+The central hub for financial health, tracking, and quick actions.
 
-| Dashboard | Transactions |
-|-----------|--------------|
-| ![Dashboard Dark](screenshots/dashboard_dark.png) | ![Transactions Dark](screenshots/transactions_dark.png) |
+![Main Dashboard](screenshots/dashboard.png)
 
-| Analytics | Budget |
-|-----------|--------|
-| ![Analytics Dark](screenshots/analytics_dark.png) | ![Budget Dark](screenshots/budget_dark.png) |
+---
 
-| Settings |
-|----------|
-| ![Settings Dark](screenshots/settings_dark.png) |
+### 💸 Management & Analytics
+Deep dive into your spending patterns with specialized views.
+
+| Transactions | Analytics |
+|:---:|:---:|
+| ![Transactions View](screenshots/transactions.png) | ![Analytics View](screenshots/analytics.png) |
+
+| Budget Planning | System Settings |
+|:---:|:---:|
+| ![Budget View](screenshots/budget.png) | ![Settings View](screenshots/settings.png) |
 
 ---
 
 ## ✨ Features
 
 ### 🔐 Multi-User Authentication (New)
-- Professional **Login** and **Register** pages with full field validation
-- Duplicate email prevention on registration
-- Passwords are validated (minimum 6 chars, must match on register)
-- Persistent sessions via `localStorage` — users stay logged in across refreshes
-- **Data isolation**: each user's transactions, budgets, and settings are stored under their own scoped key (e.g., `etp_transactions_user@example.com`)
-- **Try Demo Account** button for instant portfolio previews (`demo@example.com` / `123456`)
-- Secure logout from the sidebar
+- Professional **Login** and **Register** pages with comprehensive field validation.
+- Duplicate email prevention and secure password verification.
+- Persistent sessions via scoped `localStorage` — data is completely isolated per user.
+- **Demo Mode**: Instant access with one click or via `demo@example.com` / `123456`.
+- Secure logout integrated into the sidebar.
 
-### 📊 Dashboard
-- Personalized greeting: *"Welcome back, Jalal Akbar."*
-- At-a-glance stats: Balance, Income, Expenses, Savings Rate
-- Financial Health Score with live visual indicator
-- Recent Transactions widget
-- Top Spending Categories breakdown
-- Quick Action buttons (Add Income, Add Expense, Set Budget, Export CSV)
+### 📊 Smart Dashboard
+- **Personalized Experience**: Custom greeting and user-aware profile.
+- **Live Metrics**: Balance, Income, Expenses, and Savings Rate tracking.
+- **Financial Health Score**: Real-time visual indicator of your fiscal status.
+- **Recent Activity**: Quick view of latest transactions.
+- **Expense Breakdown**: Top categories visualized by importance.
 
-### 💸 Transactions
-- Add, edit, delete transactions with full details (title, amount, category, date, payment method, notes)
-- Search, filter by type, category, date range
-- Inline row actions with edit/delete buttons
+### 💰 Budget & Analytics
+- **Visual Budgeting**: Set monthly targets with live progress tracking (Safe/Danger alerts).
+- **Deep Insights**: Trend analysis and category breakdowns powered by **Recharts**.
+- **Interactive Charts**: Responsive data visualization with custom tooltips.
 
-### 📈 Analytics
-- Spending trend charts (line/bar) powered by **Recharts**
-- Income vs. Expense comparison
-- Category-wise breakdown (pie/donut)
-- Custom tooltip on all charts
-
-### 💰 Budget
-- Set and update monthly budget target
-- Real-time progress bar (safe/danger)
-- Status metrics: Spent, Remaining, Budget %, Days left
-
-### ⚙️ Settings
-- Change display name, currency, date format
-- Export / Import full JSON backup
-- CSV export for all transactions
-- Clear all data (with confirmation)
-- Dark / Light mode toggle
+### ⚙️ Professional Settings
+- Multi-currency support and localized date formatting.
+- **Data Mobility**: Full JSON backup export and import.
+- **Reporting**: One-click CSV export for all transaction records.
 
 ---
 
@@ -94,33 +68,25 @@
 
 | Technology | Purpose |
 |---|---|
-| React 18 + Vite | UI framework & dev server |
-| Vanilla CSS (Modular) | Custom design system (`variables`, `globals`, `layout`, `dashboard`, `transactions`, `budget`, `common`, `auth`, `responsive`) |
-| Lucide React | Icon library |
-| Recharts | Data visualization |
-| localStorage | Client-side persistence & auth |
+| **React 18 + Vite** | High-performance UI framework and modern bundler |
+| **Vanilla CSS** | Modular Design System (Layout, Dashboard, Theme, Responsive) |
+| **Lucide React** | Premium icon system |
+| **Recharts** | Advanced data visualization and charting |
+| **localStorage** | Secure client-side persistence and auth isolation |
 
 ---
 
-## 🏗️ Folder Structure
+## 🏗️ Project Architecture
 
-```
+```text
 src/
-├── components/
-│   ├── common/         # Modal, Toast, EmptyState, ThemeToggle
-│   ├── dashboard/      # DashboardCards, HealthScore, QuickActions, RecentTransactions, TopCategories
-│   ├── layout/         # Header, Sidebar, Footer
-│   ├── budget/         # BudgetWidget
-│   └── transactions/   # TransactionForm, TransactionDetails, TransactionList
-├── data/               # CATEGORIES, sampleData
-├── pages/              # AuthPage, DashboardPage, TransactionsPage, AnalyticsPage, BudgetPage, SettingsPage
-├── styles/             # variables.css, globals.css, layout.css, dashboard.css,
-│                       # transactions.css, budget.css, common.css, auth.css, responsive.css
-├── utils/              # localStorage.js, calculations.js, csvExport.js, dateFormatter.js
-├── App.jsx
-└── main.jsx
-
-screenshots/            # All UI screenshots (light + dark mode)
+├── components/     # Feature-based components (dashboard, transactions, layout, etc.)
+├── data/           # Category schemas and sample seed data
+├── pages/          # Full-page views and page-level logic
+├── styles/         # Consolidated CSS architecture (variables, common, responsive)
+├── utils/          # Core utilities (auth, calculations, csv, date formatting)
+├── App.jsx         # App routing and global state provider
+└── main.jsx        # Entry point
 ```
 
 ---
@@ -129,7 +95,7 @@ screenshots/            # All UI screenshots (light + dark mode)
 
 1. **Clone the repository**
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/jalalakbar47/expense-tracker-pro.git
    cd expense-tracker-pro
    ```
 
@@ -148,17 +114,14 @@ screenshots/            # All UI screenshots (light + dark mode)
    npm run build
    ```
 
-5. **Try the demo account**
-   - Email: `demo@example.com`
-   - Password: `123456`
-
 ---
 
 ## 🔐 Security Note
 
-> **Important**: This application uses a **frontend-only authentication system** for demonstration and portfolio purposes.
-> User credentials and data are stored in the browser's `localStorage` — nothing is sent to a server.
-> For a production deployment, a secure backend with bcrypt password hashing and JWT-based sessions would be required.
+> [!IMPORTANT]
+> This application uses a **frontend-only authentication system** specifically for showcase purposes.
+> User data is stored locally in the browser's `localStorage` using email-prefixed keys. 
+> For a production deployment, a secure backend with password encryption and JWT sessions is required.
 
 ---
 
@@ -166,7 +129,7 @@ screenshots/            # All UI screenshots (light + dark mode)
 
 Designed and built with passion by **Jalal Akbar**.
 
-*Dedicated to my father, **M. Akbar** — the greatest inspiration and support of my journey. This project is a testament to the values and hard work he instilled in me.*
+*Dedicated to my father, **M. Akbar** — my greatest inspiration. This project reflects the values of hard work and excellence he instilled in me.*
 
 ---
 
