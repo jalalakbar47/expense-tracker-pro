@@ -13,7 +13,7 @@ const Footer = () => {
             <span>Expense Tracker Pro</span>
           </div>
           <div className="footer-links">
-            <a href="https://github.com/jalalakbar" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/jalalakbar47" target="_blank" rel="noopener noreferrer">
               <Globe size={20} />
             </a>
           </div>
