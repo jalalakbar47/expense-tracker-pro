@@ -13,8 +13,9 @@ body {
   font-family: 'Outfit', sans-serif;
   background-color: var(--bg-secondary);
   color: var(--text-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 button {
@@ -81,13 +82,19 @@ textarea:focus {
 .card {
   background: var(--bg-primary);
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   padding: 1.5rem;
   box-shadow: var(--shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
-.card:hover { box-shadow: var(--shadow-lg); }
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(79, 70, 229, 0.3);
+}
 
 /* ─────────────────────────────────────────
    ANIMATIONS
@@ -109,26 +116,46 @@ textarea:focus {
 /* ─────────────────────────────────────────
    TABLE BASE
 ───────────────────────────────────────── */
-.table-container { width: 100%; overflow-x: auto; }
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+}
 
-table { width: 100%; border-collapse: collapse; text-align: left; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
 
 th {
-  padding: 1rem;
-  background: var(--bg-tertiary);
-  font-weight: 600;
+  padding: 1.25rem 1rem;
+  background: var(--bg-secondary);
+  font-weight: 700;
   color: var(--text-secondary);
-  font-size: 0.875rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border);
 }
 
 td {
-  padding: 1.5rem 1rem;
+  padding: 1.25rem 1rem;
   border-bottom: 1px solid var(--border);
   color: var(--text-primary);
   font-size: 0.95rem;
+  transition: background 0.2s ease;
 }
 
-tr:last-child td { border-bottom: none; }
+tr:hover td {
+  background: var(--bg-tertiary);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
 
 /* ─────────────────────────────────────────
    SHARED PAGE HEADER
