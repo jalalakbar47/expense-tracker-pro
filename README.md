@@ -128,10 +128,7 @@ src/
 ## ❤️ Dedication
 
 Created with ❤️ by **Jalal Akbar**
-
 *Dedicated To My ❤️ J/S — My Inspiration.*
-
----
 
 ## 📄 License
 
