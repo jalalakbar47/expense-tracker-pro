@@ -1,5 +1,12 @@
 # Expense Tracker Pro 🚀
 
+[![Top Language: JavaScript](https://img.shields.io/github/languages/top/jalalakbar47/expense-tracker-pro?style=for-the-badge)](https://github.com/jalalakbar47/expense-tracker-pro)
+[![GitHub Stars](https://img.shields.io/github/stars/jalalakbar47/expense-tracker-pro?style=for-the-badge)](https://github.com/jalalakbar47/expense-tracker-pro/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/jalalakbar47/expense-tracker-pro?style=for-the-badge)](https://github.com/jalalakbar47/expense-tracker-pro/network/members)
+[![Open Issues](https://img.shields.io/github/issues/jalalakbar47/expense-tracker-pro?style=for-the-badge)](https://github.com/jalalakbar47/expense-tracker-pro/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/jalalakbar47/expense-tracker-pro?style=for-the-badge)](https://github.com/jalalakbar47/expense-tracker-pro/commits/main)
+[![Live Deployment](https://img.shields.io/badge/Live%20Deployment-Vercel-000000?style=for-the-badge&logo=vercel)](https://expense-tracker-pro-steel.vercel.app)
+
 > A premium, multi-user personal finance SaaS dashboard built with **React.js + Vite**.
 > **Repository:** [https://github.com/jalalakbar47/expense-tracker-pro.git](https://github.com/jalalakbar47/expense-tracker-pro.git)
 
